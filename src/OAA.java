@@ -5,7 +5,7 @@ public class OAA {
 
     public class Main {
 
-        // Data Classes
+
         public static class Subjects {
             private String subjects;
 
@@ -70,19 +70,19 @@ public class OAA {
             }
         }
 
-        // DatabaseConnection Class
+
         public static class DatabaseConnection {
             private List<Bill> bills = new ArrayList<>();
             private List<StudentInfo> studentInfos = new ArrayList<>();
 
             public DatabaseConnection() {
-                // Initialize with some data
+
                 bills.add(new Bill(1, 100.0));
                 studentInfos.add(new StudentInfo(1, 500.0));
             }
 
             public boolean pushData(Subjects subjects) {
-                // Simulate pushing data to the database
+
                 System.out.println("Pushing subjects data: " + subjects.getSubjects());
                 return true;
             }
@@ -101,19 +101,19 @@ public class OAA {
             }
 
             public boolean pushData(StudentInfo studentInfo) {
-                // Simulate pushing data to the database
+
                 System.out.println("Updating student balance: " + studentInfo.getBalance());
                 return true;
             }
 
             public boolean updateInfoInDatabase(Info info) {
-                // Simulate updating information in the database
+
                 System.out.println("Updating info: " + info.getInfo());
                 return true;
             }
         }
 
-        // Controller Class
+
         public static class Controller {
             private DatabaseConnection dbConnection;
 
@@ -145,7 +145,7 @@ public class OAA {
             }
         }
 
-        // UI Class
+
         public static class UI {
             private Controller controller;
 
@@ -196,21 +196,21 @@ public class OAA {
             }
         }
 
-        // Main method to run the example
+
         public static void main(String[] args) {
             DatabaseConnection dbConnection = new DatabaseConnection();
             Controller controller = new Controller(dbConnection);
             UI ui = new UI(controller);
 
-            // Example usage
-            // Updating registered subjects
+
+
             ui.enterRegisteredSubjects("Math, Science, English");
 
-            // Processing fees in Edusoft
+
             ui.listAllBillNeedToProcess();
             ui.billConfirm(1, 200.0);
 
-            // Updating information on Edusoft Web
+
             ui.enterUpdatedInformation("New Course Information");
         }
     }

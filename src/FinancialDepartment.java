@@ -54,11 +54,11 @@ public class FinancialDepartment {
         }
 
         void sendBillToOAA(int studentId, double amount) {
-            // Logic to send bill to OAA
+
         }
 
         void calculateTotalTuition(int subjectId) {
-            // Logic to calculate total tuition
+
         }
     }
 
@@ -81,8 +81,8 @@ public class FinancialDepartment {
     class DatabaseConnector {
 
         boolean pushData(String sql) {
-            // Logic to push data to the database
-            // Simulating database operation success
+
+
             return true;
         }
     }
